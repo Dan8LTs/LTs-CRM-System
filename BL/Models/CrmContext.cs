@@ -3,7 +3,7 @@ using System.Data.Entity;
 
 namespace BL.Models
 {
-    class CrmContext : DbContext
+    public class CrmContext : DbContext
     {
         public CrmContext() : base("LTsCrmDB") { }
         public DbSet<Check> Checks { get; set; }
