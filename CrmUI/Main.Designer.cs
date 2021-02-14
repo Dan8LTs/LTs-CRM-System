@@ -32,11 +32,12 @@ namespace CrmUI
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.entitiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Product = new System.Windows.Forms.ToolStripMenuItem();
-            this.Customer = new System.Windows.Forms.ToolStripMenuItem();
-            this.Seller = new System.Windows.Forms.ToolStripMenuItem();
-            this.Check = new System.Windows.Forms.ToolStripMenuItem();
             this.ProductAdd = new System.Windows.Forms.ToolStripMenuItem();
+            this.Customer = new System.Windows.Forms.ToolStripMenuItem();
             this.CustomerAdd = new System.Windows.Forms.ToolStripMenuItem();
+            this.Seller = new System.Windows.Forms.ToolStripMenuItem();
+            this.SellerAdd = new System.Windows.Forms.ToolStripMenuItem();
+            this.Check = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,6 +71,13 @@ namespace CrmUI
             this.Product.Text = "Product";
             this.Product.Click += new System.EventHandler(this.Product_Click);
             // 
+            // ProductAdd
+            // 
+            this.ProductAdd.Name = "ProductAdd";
+            this.ProductAdd.Size = new System.Drawing.Size(180, 22);
+            this.ProductAdd.Text = "Add";
+            this.ProductAdd.Click += new System.EventHandler(this.ProductAdd_Click);
+            // 
             // Customer
             // 
             this.Customer.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -79,12 +87,28 @@ namespace CrmUI
             this.Customer.Text = "Customer";
             this.Customer.Click += new System.EventHandler(this.Customer_Click);
             // 
+            // CustomerAdd
+            // 
+            this.CustomerAdd.Name = "CustomerAdd";
+            this.CustomerAdd.Size = new System.Drawing.Size(96, 22);
+            this.CustomerAdd.Text = "Add";
+            this.CustomerAdd.Click += new System.EventHandler(this.CustomerAdd_Click);
+            // 
             // Seller
             // 
+            this.Seller.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.SellerAdd});
             this.Seller.Name = "Seller";
             this.Seller.Size = new System.Drawing.Size(180, 22);
             this.Seller.Text = "Seller";
             this.Seller.Click += new System.EventHandler(this.Seller_Click);
+            // 
+            // SellerAdd
+            // 
+            this.SellerAdd.Name = "SellerAdd";
+            this.SellerAdd.Size = new System.Drawing.Size(180, 22);
+            this.SellerAdd.Text = "Add";
+            this.SellerAdd.Click += new System.EventHandler(this.SellerAdd_Click);
             // 
             // Check
             // 
@@ -92,19 +116,6 @@ namespace CrmUI
             this.Check.Size = new System.Drawing.Size(180, 22);
             this.Check.Text = "Check";
             this.Check.Click += new System.EventHandler(this.Check_Click);
-            // 
-            // ProductAdd
-            // 
-            this.ProductAdd.Name = "ProductAdd";
-            this.ProductAdd.Size = new System.Drawing.Size(180, 22);
-            this.ProductAdd.Text = "Add";
-            // 
-            // CustomerAdd
-            // 
-            this.CustomerAdd.Name = "CustomerAdd";
-            this.CustomerAdd.Size = new System.Drawing.Size(180, 22);
-            this.CustomerAdd.Text = "Add";
-            this.CustomerAdd.Click += new System.EventHandler(this.CustomerAdd_Click);
             // 
             // Main
             // 
@@ -132,5 +143,6 @@ namespace CrmUI
         private System.Windows.Forms.ToolStripMenuItem Check;
         private System.Windows.Forms.ToolStripMenuItem ProductAdd;
         private System.Windows.Forms.ToolStripMenuItem CustomerAdd;
+        private System.Windows.Forms.ToolStripMenuItem SellerAdd;
     }
 }

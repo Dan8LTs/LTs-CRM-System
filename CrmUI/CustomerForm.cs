@@ -11,24 +11,18 @@ namespace CrmUI
         {
             InitializeComponent();
         }
-
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        public CustomerForm(Customer customer) : this()
         {
-
-        }
-
-        private void CustomerForm_Load(object sender, EventArgs e)
-        {
-
+            Customer = customer;
+            richTextBox1.Text = Customer.Name;
+            numericUpDown1.Value = Convert.ToInt32(numericUpDown1.Value);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Customer = new Customer
-            {
-                Name = richTextBox1.Text,
-                Age = Convert.ToInt32(richTextBox2.Text)
-            };
+            var customer = Customer ?? new Customer();
+            customer.Name = richTextBox1.Text;
+            customer.Age = Convert.ToInt32(numericUpDown1.Value);
             Close();
         }
     }

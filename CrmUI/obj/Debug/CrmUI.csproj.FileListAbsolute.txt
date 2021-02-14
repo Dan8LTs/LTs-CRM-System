@@ -18,3 +18,5 @@ C:\Users\Данил\source\repos\СRM System\CrmUI\obj\Debug\CrmUI.csproj.CopyCo
 C:\Users\Данил\source\repos\СRM System\CrmUI\obj\Debug\CrmUI.exe
 C:\Users\Данил\source\repos\СRM System\CrmUI\obj\Debug\CrmUI.pdb
 C:\Users\Данил\source\repos\СRM System\CrmUI\obj\Debug\CrmUI.CustomerForm.resources
+C:\Users\Данил\source\repos\СRM System\CrmUI\obj\Debug\CrmUI.SellerForm.resources
+C:\Users\Данил\source\repos\СRM System\CrmUI\obj\Debug\CrmUI.ProductForm.resources

@@ -16,34 +16,54 @@ namespace CrmUI
 
         private void Product_Click(object sender, EventArgs e)
         {
-            var catalogProduct = new Catalog<Product>(LTsCrmDB.Products);
+            var catalogProduct = new Catalog<Product>(LTsCrmDB.Products, LTsCrmDB);
             catalogProduct.Show();
         }
 
         private void Customer_Click(object sender, EventArgs e)
         {
-            var catalogCustomer = new Catalog<Customer>(LTsCrmDB.Customers);
+            var catalogCustomer = new Catalog<Customer>(LTsCrmDB.Customers, LTsCrmDB);
             catalogCustomer.Show();
         }
 
         private void Seller_Click(object sender, EventArgs e)
         {
-            var catalogSeller = new Catalog<Seller>(LTsCrmDB.Sellers);
+            var catalogSeller = new Catalog<Seller>(LTsCrmDB.Sellers, LTsCrmDB);
             catalogSeller.Show();
         }
 
         private void Check_Click(object sender, EventArgs e)
         {
-            var catalogCheck = new Catalog<Check>(LTsCrmDB.Checks);
+            var catalogCheck = new Catalog<Check>(LTsCrmDB.Checks, LTsCrmDB);
             catalogCheck.Show();
         }
 
         private void CustomerAdd_Click(object sender, EventArgs e)
         {
-            var form = new CustomerForm();
-            if(form.ShowDialog() == DialogResult.OK)
+            var customerForm = new CustomerForm();
+            if(customerForm.ShowDialog() == DialogResult.OK)
             {
-                LTsCrmDB.Customers.Add(form.Customer);
+                LTsCrmDB.Customers.Add(customerForm.Customer);
+                LTsCrmDB.SaveChanges();
+            }
+        }
+
+        private void SellerAdd_Click(object sender, EventArgs e)
+        {
+            var sellerForm = new SellerForm();
+            if (sellerForm.ShowDialog() == DialogResult.OK)
+            {
+                LTsCrmDB.Sellers.Add(sellerForm.Seller);
+                LTsCrmDB.SaveChanges();
+            }
+        }
+
+        private void ProductAdd_Click(object sender, EventArgs e)
+        {
+            var productForm = new ProductForm();
+            if (productForm.ShowDialog() == DialogResult.OK)
+            {
+                LTsCrmDB.Products.Add(productForm.Product);
                 LTsCrmDB.SaveChanges();
             }
         }
