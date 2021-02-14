@@ -22,3 +22,15 @@ C:\Users\Данил\source\repos\CRM\LTs-CRM-System\BL\obj\Debug\CrmBL.csproj.Co
 C:\Users\Данил\source\repos\CRM\LTs-CRM-System\BL\obj\Debug\CrmBL.csproj.CopyComplete
 C:\Users\Данил\source\repos\CRM\LTs-CRM-System\BL\obj\Debug\BL.dll
 C:\Users\Данил\source\repos\CRM\LTs-CRM-System\BL\obj\Debug\BL.pdb
+C:\Users\Данил\source\repos\LTs-CRM-System\BL\bin\Debug\BL.dll.config
+C:\Users\Данил\source\repos\LTs-CRM-System\BL\bin\Debug\BL.dll
+C:\Users\Данил\source\repos\LTs-CRM-System\BL\bin\Debug\BL.pdb
+C:\Users\Данил\source\repos\LTs-CRM-System\BL\bin\Debug\EntityFramework.dll
+C:\Users\Данил\source\repos\LTs-CRM-System\BL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Данил\source\repos\LTs-CRM-System\BL\bin\Debug\EntityFramework.xml
+C:\Users\Данил\source\repos\LTs-CRM-System\BL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Данил\source\repos\LTs-CRM-System\BL\obj\Debug\CrmBL.csprojAssemblyReference.cache
+C:\Users\Данил\source\repos\LTs-CRM-System\BL\obj\Debug\CrmBL.csproj.CoreCompileInputs.cache
+C:\Users\Данил\source\repos\LTs-CRM-System\BL\obj\Debug\CrmBL.csproj.CopyComplete
+C:\Users\Данил\source\repos\LTs-CRM-System\BL\obj\Debug\BL.dll
+C:\Users\Данил\source\repos\LTs-CRM-System\BL\obj\Debug\BL.pdb
