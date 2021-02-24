@@ -19,12 +19,12 @@ namespace CrmUI
             numericUpDown2.Value = Product.Count;
         }
 
-        private void button1_Click(object sender, System.EventArgs e)
+        private void Button1_Click(object sender, System.EventArgs e)
         {
-            var product = Product ?? new Product();
-            product.Name = richTextBox1.Text;
-            product.Price = Convert.ToDecimal(numericUpDown1.Value);
-            product.Count = Convert.ToUInt32(numericUpDown2.Value);
+            Product = Product ?? new Product();
+            Product.Name = richTextBox1.Text;
+            Product.Price = Convert.ToDecimal(numericUpDown1.Value);
+            Product.Count = Convert.ToInt32(numericUpDown2.Value);
             Close();
         }
     }

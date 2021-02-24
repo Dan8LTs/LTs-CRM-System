@@ -22,7 +22,33 @@ namespace CrmUI
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            
+            if (typeof(T) == typeof(Product))
+            {
+                var productForm = new ProductForm();
+                if (productForm.ShowDialog() == DialogResult.OK)
+                {
+                    LTsCrmDB.Products.Add(productForm.Product);
+                    LTsCrmDB.SaveChanges();
+                }
+            }
+            else if (typeof(T) == typeof(Customer))
+            {
+                var customerForm = new CustomerForm();
+                if (customerForm.ShowDialog() == DialogResult.OK)
+                {
+                    LTsCrmDB.Customers.Add(customerForm.Customer);
+                    LTsCrmDB.SaveChanges();
+                }
+            }
+            else if (typeof(T) == typeof(Seller))
+            {
+                var sellerForm = new SellerForm();
+                if (sellerForm.ShowDialog() == DialogResult.OK)
+                {
+                    LTsCrmDB.Sellers.Add(sellerForm.Seller);
+                    LTsCrmDB.SaveChanges();
+                }
+            }
         }
 
         private void ChangeButton_Click(object sender, EventArgs e)
@@ -30,7 +56,7 @@ namespace CrmUI
             var id = dataGridView1.SelectedRows[0].Cells[0].Value;
             if(typeof(T) == typeof(Product))
             {
-                var product = set.Find(id) as Product;
+                Product product = set.Find(id) as Product;
                 if(product != null)
                 {
                     var form = new ProductForm(product);
@@ -38,7 +64,7 @@ namespace CrmUI
                     {
                         product = form.Product;
                         LTsCrmDB.SaveChanges();
-                        dataGridView1.Update();
+                        dataGridView1.Refresh();
                     }
                 }
             }
@@ -52,7 +78,7 @@ namespace CrmUI
                     {
                         customer = form.Customer;
                         LTsCrmDB.SaveChanges();
-                        dataGridView1.Update();
+                        dataGridView1.Refresh();
                     }
                 }
             }
@@ -66,10 +92,9 @@ namespace CrmUI
                     {
                         seller = form.Seller;
                         LTsCrmDB.SaveChanges();
-                        dataGridView1.Update();
+                        dataGridView1.Refresh();
                     }
                 }
-                dataGridView1.Update();
             }
         }
     }

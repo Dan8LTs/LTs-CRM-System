@@ -18,11 +18,11 @@ namespace CrmUI
             numericUpDown1.Value = Convert.ToInt32(numericUpDown1.Value);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
-            var customer = Customer ?? new Customer();
-            customer.Name = richTextBox1.Text;
-            customer.Age = Convert.ToInt32(numericUpDown1.Value);
+            Customer = Customer ?? new Customer();
+            Customer.Name = richTextBox1.Text;
+            Customer.Age = Convert.ToInt32(numericUpDown1.Value);
             Close();
         }
     }

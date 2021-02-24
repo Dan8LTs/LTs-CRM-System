@@ -17,10 +17,10 @@ namespace CrmUI
             Seller = seller;
             richTextBox1.Text = Seller.Name;
         }
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
-            var seller = Seller ?? new Seller();
-            seller.Name = richTextBox1.Text;
+            Seller = Seller ?? new Seller();
+            Seller.Name = richTextBox1.Text;
             Close();
         }
     }
