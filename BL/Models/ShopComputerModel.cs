@@ -8,14 +8,17 @@ namespace BL.Models
     {
         readonly Generator generator = new Generator();
         readonly Random rnd = new Random();
-        public List<CashDesk> CashDesks { get; set; }
-        public List<Cart> Carts { get; set; }
-        public List<Check> Checks { get; set; }
-        public List<Sell> Sells { get; set; }
-        public Queue<Seller> Sellers { get; set; }
+        public List<CashDesk> CashDesks { get; set; } = new List<CashDesk>();
+        public List<Cart> Carts { get; set; } = new List<Cart>();
+        public List<Check> Checks { get; set; } = new List<Check>();
+        public List<Sell> Sells { get; set; } = new List<Sell>();
+        public Queue<Seller> Sellers { get; set; } = new Queue<Seller>();
+
         public ShopComputerModel()
         {
             var sellers = generator.GetNewSellers(20);
+            generator.GetNewProducts(50);
+            generator.GetNewCustomers(30);
             foreach(var seller in sellers)
             {
                 Sellers.Enqueue(seller);
@@ -28,7 +31,7 @@ namespace BL.Models
         public void Start()
         {
             var customers = generator.GetNewCustomers(10);
-            var carts = new List<Cart>();
+            var carts = new Queue<Cart>();
             foreach(var customer in customers)
             {
                 var cart = new Cart(customer);
@@ -36,20 +39,23 @@ namespace BL.Models
                 {
                     cart.Add(product);
                 }
-                carts.Add(cart);
+                carts.Enqueue(cart);
             }
-            
+            while(carts.Count > 0)
+            {
+                var cash = CashDesks[rnd.Next(CashDesks.Count - 1)];
+                cash.Enqueue(carts.Dequeue());
+            }
             foreach (var cart in carts)
             {
                 var cash = CashDesks[rnd.Next(CashDesks.Count - 1)];
                 cash.Enqueue(cart);
-                carts.Remove(cart);
             }
 
             while (true)
             {
                 var cash = CashDesks[rnd.Next(CashDesks.Count - 1)];
-                cash.Dequeue();
+                var money = cash.Dequeue();
             }
         }
     }
