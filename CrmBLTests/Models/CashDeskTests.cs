@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 using CrmBL.Models;
 
 namespace BL.Models.Tests
@@ -58,7 +57,7 @@ namespace BL.Models.Tests
                 product2
             };
 
-            var cashdesk = new CashDesk(1, seller)
+            var cashdesk = new CashDesk(1, seller, null)
             {
                 MaxQueueLenght = 10
             };

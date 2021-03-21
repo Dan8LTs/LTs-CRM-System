@@ -64,3 +64,5 @@ C:\Users\Данил\source\repos\LTs-CRM-System\CrmUI\obj\Debug\CrmUI.csproj.Cor
 C:\Users\Данил\source\repos\LTs-CRM-System\CrmUI\obj\Debug\CrmUI.csproj.CopyComplete
 C:\Users\Данил\source\repos\LTs-CRM-System\CrmUI\obj\Debug\CrmUI.exe
 C:\Users\Данил\source\repos\LTs-CRM-System\CrmUI\obj\Debug\CrmUI.pdb
+C:\Users\Данил\source\repos\LTs-CRM-System\CrmUI\obj\Debug\CrmUI.ModelingForm.resources
+C:\Users\Данил\source\repos\LTs-CRM-System\CrmUI\obj\Debug\CrmUI.Login.resources

@@ -9,8 +9,8 @@ namespace CrmUI
     public partial class Catalog<T> : Form
         where T : class
     {
-        CrmContext LTsCrmDB;
-        DbSet<T> set;
+        readonly CrmContext LTsCrmDB;
+        readonly DbSet<T> set;
         public Catalog(DbSet<T> set, CrmContext LTsCrmDB)
         {
             InitializeComponent();
@@ -54,10 +54,10 @@ namespace CrmUI
         private void ChangeButton_Click(object sender, EventArgs e)
         {
             var id = dataGridView1.SelectedRows[0].Cells[0].Value;
-            if(typeof(T) == typeof(Product))
+            if (typeof(T) == typeof(Product))
             {
                 Product product = set.Find(id) as Product;
-                if(product != null)
+                if (product != null)
                 {
                     var form = new ProductForm(product);
                     if (form.ShowDialog() == DialogResult.OK)
@@ -68,7 +68,7 @@ namespace CrmUI
                     }
                 }
             }
-            else if(typeof(T) == typeof(Customer))
+            else if (typeof(T) == typeof(Customer))
             {
                 var customer = set.Find(id) as Customer;
                 if (customer != null)
@@ -82,7 +82,7 @@ namespace CrmUI
                     }
                 }
             }
-            else if(typeof(T) == typeof(Seller))
+            else if (typeof(T) == typeof(Seller))
             {
                 var seller = set.Find(id) as Seller;
                 if (seller != null)
@@ -95,6 +95,32 @@ namespace CrmUI
                         dataGridView1.Refresh();
                     }
                 }
+            }
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            var id = dataGridView1.SelectedRows[0].Cells[0].Value;
+            if (typeof(T) == typeof(Product))
+            {
+                var product = set.Find(id) as Product;
+                LTsCrmDB.Products.Remove(product);
+                LTsCrmDB.SaveChanges();
+                dataGridView1.Update();
+            }
+            else if (typeof(T) == typeof(Customer))
+            {
+                var customer = set.Find(id) as Customer;
+                LTsCrmDB.Customers.Remove(customer);
+                LTsCrmDB.SaveChanges();
+                dataGridView1.Update();
+            }
+            else if (typeof(T) == typeof(Seller))
+            {
+                var seller = set.Find(id) as Seller;
+                LTsCrmDB.Sellers.Remove(seller);
+                LTsCrmDB.SaveChanges();
+                dataGridView1.Update();
             }
         }
     }

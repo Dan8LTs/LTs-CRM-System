@@ -10,3 +10,17 @@ C:\Users\Данил\source\repos\СRM System\BL\obj\Release\CrmBL.csproj.CoreCom
 C:\Users\Данил\source\repos\СRM System\BL\obj\Release\CrmBL.csproj.CopyComplete
 C:\Users\Данил\source\repos\СRM System\BL\obj\Release\BL.dll
 C:\Users\Данил\source\repos\СRM System\BL\obj\Release\BL.pdb
+C:\Users\Данил\source\repos\LTs-CRM-System\BL\bin\Release\BL.dll.config
+C:\Users\Данил\source\repos\LTs-CRM-System\BL\bin\Release\BL.dll
+C:\Users\Данил\source\repos\LTs-CRM-System\BL\bin\Release\BL.pdb
+C:\Users\Данил\source\repos\LTs-CRM-System\BL\bin\Release\EntityFramework.dll
+C:\Users\Данил\source\repos\LTs-CRM-System\BL\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Данил\source\repos\LTs-CRM-System\BL\bin\Release\EntityFramework.xml
+C:\Users\Данил\source\repos\LTs-CRM-System\BL\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Данил\source\repos\LTs-CRM-System\BL\obj\Release\CrmBL.csprojAssemblyReference.cache
+C:\Users\Данил\source\repos\LTs-CRM-System\BL\obj\Release\BL.Migrations.LTsCrmMigration.resources
+C:\Users\Данил\source\repos\LTs-CRM-System\BL\obj\Release\CrmBL.csproj.GenerateResource.cache
+C:\Users\Данил\source\repos\LTs-CRM-System\BL\obj\Release\CrmBL.csproj.CoreCompileInputs.cache
+C:\Users\Данил\source\repos\LTs-CRM-System\BL\obj\Release\CrmBL.csproj.CopyComplete
+C:\Users\Данил\source\repos\LTs-CRM-System\BL\obj\Release\BL.dll
+C:\Users\Данил\source\repos\LTs-CRM-System\BL\obj\Release\BL.pdb

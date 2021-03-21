@@ -1,15 +1,13 @@
 ﻿using CrmBL.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BL.Models
 {
     public class CashDesk
     {
-        readonly CrmContext LTsCrmDB = new CrmContext();
+        CrmContext LTsCrmDB;
+
         public int Number { get; set; }
         public Seller Seller { get; set; }
         public Queue<Cart> Carts { get; set; }
@@ -17,8 +15,9 @@ namespace BL.Models
         public int ExitCustomer { get; set; }
         public bool IsModel { get; set; }
         public int Count => Carts.Count;
+        
         public event EventHandler<Check> CheckClosed;
-        public CashDesk(int number, Seller seller)
+        public CashDesk(int number, Seller seller, CrmContext LTsCrmDB)
         {
             Number = number;
             Seller = seller;
@@ -29,7 +28,7 @@ namespace BL.Models
         }
         public void Enqueue(Cart cart)
         {
-            if (Carts.Count <= MaxQueueLenght)
+            if (Carts.Count < MaxQueueLenght)
             {
                 Carts.Enqueue(cart);
             }
@@ -68,7 +67,7 @@ namespace BL.Models
                 var sells = new List<Sell>();
                 foreach (Product product in cart)
                 {
-                    if(product.Count > 0)
+                    if (product.Count > 0)
                     {
                         var sell = new Sell()
                         {
@@ -87,6 +86,7 @@ namespace BL.Models
                         sum += product.Price;
                     }
                 }
+
                 check.Price = sum;
                 if (!IsModel)
                 {
@@ -95,6 +95,10 @@ namespace BL.Models
                 CheckClosed?.Invoke(this, check);
             }
             return sum;
+        }
+        public override string ToString()
+        {
+            return $"Cashdesk №{Number}";
         }
     }
 }
