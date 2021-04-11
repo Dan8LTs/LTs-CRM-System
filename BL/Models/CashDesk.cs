@@ -15,7 +15,7 @@ namespace BL.Models
         public int ExitCustomer { get; set; }
         public bool IsModel { get; set; }
         public int Count => Carts.Count;
-        
+
         public event EventHandler<Check> CheckClosed;
         public CashDesk(int number, Seller seller, CrmContext LTsCrmDB)
         {

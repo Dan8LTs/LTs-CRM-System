@@ -46,7 +46,7 @@ namespace BL.Models.Tests
             var cartResult = cart.GetAll();
             // assert
             Assert.AreEqual(expectedResult.Count, cart.GetAll().Count);
-            for(int i = 0; i < expectedResult.Count; i++)
+            for (int i = 0; i < expectedResult.Count; i++)
             {
                 Assert.AreEqual(expectedResult[i], cartResult[i]);
             }

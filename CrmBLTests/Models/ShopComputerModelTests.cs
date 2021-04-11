@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using CrmBl.Model;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Threading;
 
 namespace BL.Models.Tests
