@@ -13,7 +13,7 @@ namespace CrmUI
         Cart cart;
         Customer customer;
         CashDesk cashDesk;
-        
+
         public Main()
         {
             InitializeComponent();
@@ -23,7 +23,7 @@ namespace CrmUI
             cashDesk = new CashDesk(1, LTsCrmDB.Sellers.FirstOrDefault(), LTsCrmDB)
             {
                 IsModel = false
-            };        
+            };
         }
         private void Product_Click(object sender, EventArgs e)
         {
@@ -79,12 +79,6 @@ namespace CrmUI
             }
         }
 
-        private void mOToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var form = new ModelingForm();
-            form.Show();
-        }
-
         private void Main_Load(object sender, EventArgs e)
         {
             Task.Run(() =>
@@ -99,7 +93,7 @@ namespace CrmUI
 
         private void listBox1_DoubleClick(object sender, EventArgs e)
         {
-            if(listBox1.SelectedItem is Product product)
+            if (listBox1.SelectedItem is Product product)
             {
                 cart.Add(product);
                 listBox2.Items.Add(product);
@@ -118,7 +112,7 @@ namespace CrmUI
         {
             var loginForm = new Login();
             loginForm.ShowDialog();
-            if(loginForm.DialogResult == DialogResult.OK)
+            if (loginForm.DialogResult == DialogResult.OK)
             {
                 var tempCustomer = LTsCrmDB.Customers.FirstOrDefault(c => c.Name.Equals(loginForm.Customer.Name));
                 if (tempCustomer != null)
@@ -133,7 +127,7 @@ namespace CrmUI
                 }
                 cart.Customer = customer;
             }
-            if(customer != null)
+            if (customer != null)
             {
                 linkLabel1.Text = $"Hello, {customer.Name}!";
             }
@@ -145,7 +139,7 @@ namespace CrmUI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if(customer != null)
+            if (customer != null)
             {
                 cashDesk.Enqueue(cart);
                 var price = cashDesk.Dequeue();
@@ -161,9 +155,16 @@ namespace CrmUI
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void Update_Button_Click(object sender, EventArgs e)
         {
-
+            Task.Run(() =>
+            {
+                listBox1.Invoke((Action)delegate
+                {
+                    listBox1.Items.Clear();
+                    listBox1.Items.AddRange(LTsCrmDB.Products.ToArray());
+                });
+            });
         }
     }
 }

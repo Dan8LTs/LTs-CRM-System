@@ -44,3 +44,26 @@ C:\Users\Данил\source\repos\LTs-CRM-System\CrmUI\obj\Release\CrmUI.csproj.C
 C:\Users\Данил\source\repos\LTs-CRM-System\CrmUI\obj\Release\CrmUI.csproj.CopyComplete
 C:\Users\Данил\source\repos\LTs-CRM-System\CrmUI\obj\Release\CrmUI.exe
 C:\Users\Данил\source\repos\LTs-CRM-System\CrmUI\obj\Release\CrmUI.pdb
+D:\Main Files\VS_Projects\Danil-LTs\LTs-CRM-System\CrmUI\bin\Release\CrmUI.exe.config
+D:\Main Files\VS_Projects\Danil-LTs\LTs-CRM-System\CrmUI\bin\Release\CrmUI.exe
+D:\Main Files\VS_Projects\Danil-LTs\LTs-CRM-System\CrmUI\bin\Release\CrmUI.pdb
+D:\Main Files\VS_Projects\Danil-LTs\LTs-CRM-System\CrmUI\bin\Release\BL.dll
+D:\Main Files\VS_Projects\Danil-LTs\LTs-CRM-System\CrmUI\bin\Release\EntityFramework.dll
+D:\Main Files\VS_Projects\Danil-LTs\LTs-CRM-System\CrmUI\bin\Release\EntityFramework.SqlServer.dll
+D:\Main Files\VS_Projects\Danil-LTs\LTs-CRM-System\CrmUI\bin\Release\BL.pdb
+D:\Main Files\VS_Projects\Danil-LTs\LTs-CRM-System\CrmUI\bin\Release\BL.dll.config
+D:\Main Files\VS_Projects\Danil-LTs\LTs-CRM-System\CrmUI\bin\Release\EntityFramework.xml
+D:\Main Files\VS_Projects\Danil-LTs\LTs-CRM-System\CrmUI\bin\Release\EntityFramework.SqlServer.xml
+D:\Main Files\VS_Projects\Danil-LTs\LTs-CRM-System\CrmUI\obj\Release\CrmUI.csproj.AssemblyReference.cache
+D:\Main Files\VS_Projects\Danil-LTs\LTs-CRM-System\CrmUI\obj\Release\CrmUI.Catalog.resources
+D:\Main Files\VS_Projects\Danil-LTs\LTs-CRM-System\CrmUI\obj\Release\CrmUI.CustomerForm.resources
+D:\Main Files\VS_Projects\Danil-LTs\LTs-CRM-System\CrmUI\obj\Release\CrmUI.Login.resources
+D:\Main Files\VS_Projects\Danil-LTs\LTs-CRM-System\CrmUI\obj\Release\CrmUI.Main.resources
+D:\Main Files\VS_Projects\Danil-LTs\LTs-CRM-System\CrmUI\obj\Release\CrmUI.ProductForm.resources
+D:\Main Files\VS_Projects\Danil-LTs\LTs-CRM-System\CrmUI\obj\Release\CrmUI.Properties.Resources.resources
+D:\Main Files\VS_Projects\Danil-LTs\LTs-CRM-System\CrmUI\obj\Release\CrmUI.SellerForm.resources
+D:\Main Files\VS_Projects\Danil-LTs\LTs-CRM-System\CrmUI\obj\Release\CrmUI.csproj.GenerateResource.cache
+D:\Main Files\VS_Projects\Danil-LTs\LTs-CRM-System\CrmUI\obj\Release\CrmUI.csproj.CoreCompileInputs.cache
+D:\Main Files\VS_Projects\Danil-LTs\LTs-CRM-System\CrmUI\obj\Release\CrmUI.csproj.CopyComplete
+D:\Main Files\VS_Projects\Danil-LTs\LTs-CRM-System\CrmUI\obj\Release\CrmUI.exe
+D:\Main Files\VS_Projects\Danil-LTs\LTs-CRM-System\CrmUI\obj\Release\CrmUI.pdb

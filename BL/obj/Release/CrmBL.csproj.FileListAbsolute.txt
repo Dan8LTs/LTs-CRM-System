@@ -24,3 +24,17 @@ C:\Users\Данил\source\repos\LTs-CRM-System\BL\obj\Release\CrmBL.csproj.Core
 C:\Users\Данил\source\repos\LTs-CRM-System\BL\obj\Release\CrmBL.csproj.CopyComplete
 C:\Users\Данил\source\repos\LTs-CRM-System\BL\obj\Release\BL.dll
 C:\Users\Данил\source\repos\LTs-CRM-System\BL\obj\Release\BL.pdb
+D:\Main Files\VS_Projects\Danil-LTs\LTs-CRM-System\BL\bin\Release\BL.dll.config
+D:\Main Files\VS_Projects\Danil-LTs\LTs-CRM-System\BL\bin\Release\BL.dll
+D:\Main Files\VS_Projects\Danil-LTs\LTs-CRM-System\BL\bin\Release\BL.pdb
+D:\Main Files\VS_Projects\Danil-LTs\LTs-CRM-System\BL\bin\Release\EntityFramework.dll
+D:\Main Files\VS_Projects\Danil-LTs\LTs-CRM-System\BL\bin\Release\EntityFramework.SqlServer.dll
+D:\Main Files\VS_Projects\Danil-LTs\LTs-CRM-System\BL\bin\Release\EntityFramework.xml
+D:\Main Files\VS_Projects\Danil-LTs\LTs-CRM-System\BL\bin\Release\EntityFramework.SqlServer.xml
+D:\Main Files\VS_Projects\Danil-LTs\LTs-CRM-System\BL\obj\Release\CrmBL.csproj.AssemblyReference.cache
+D:\Main Files\VS_Projects\Danil-LTs\LTs-CRM-System\BL\obj\Release\BL.Migrations.LTsCrmMigration.resources
+D:\Main Files\VS_Projects\Danil-LTs\LTs-CRM-System\BL\obj\Release\CrmBL.csproj.GenerateResource.cache
+D:\Main Files\VS_Projects\Danil-LTs\LTs-CRM-System\BL\obj\Release\CrmBL.csproj.CoreCompileInputs.cache
+D:\Main Files\VS_Projects\Danil-LTs\LTs-CRM-System\BL\obj\Release\CrmBL.csproj.CopyComplete
+D:\Main Files\VS_Projects\Danil-LTs\LTs-CRM-System\BL\obj\Release\BL.dll
+D:\Main Files\VS_Projects\Danil-LTs\LTs-CRM-System\BL\obj\Release\BL.pdb

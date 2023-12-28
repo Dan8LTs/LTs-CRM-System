@@ -53,74 +53,95 @@ namespace CrmUI
 
         private void ChangeButton_Click(object sender, EventArgs e)
         {
-            var id = dataGridView1.SelectedRows[0].Cells[0].Value;
-            if (typeof(T) == typeof(Product))
+            try
             {
-                Product product = set.Find(id) as Product;
-                if (product != null)
+                var id = dataGridView1.SelectedRows[0].Cells[0].Value;
+                if (typeof(T) == typeof(Product))
                 {
-                    var form = new ProductForm(product);
-                    if (form.ShowDialog() == DialogResult.OK)
+                    Product product = set.Find(id) as Product;
+                    if (product != null)
                     {
-                        product = form.Product;
-                        LTsCrmDB.SaveChanges();
-                        dataGridView1.Refresh();
+                        var form = new ProductForm(product);
+                        if (form.ShowDialog() == DialogResult.OK)
+                        {
+                            product = form.Product;
+                            LTsCrmDB.SaveChanges();
+                            dataGridView1.Refresh();
+                        }
+                    }
+                }
+                else if (typeof(T) == typeof(Customer))
+                {
+                    var customer = set.Find(id) as Customer;
+                    if (customer != null)
+                    {
+                        var form = new CustomerForm(customer);
+                        if (form.ShowDialog() == DialogResult.OK)
+                        {
+                            customer = form.Customer;
+                            LTsCrmDB.SaveChanges();
+                            dataGridView1.Refresh();
+                        }
+                    }
+                }
+                else if (typeof(T) == typeof(Seller))
+                {
+                    var seller = set.Find(id) as Seller;
+                    if (seller != null)
+                    {
+                        var form = new SellerForm(seller);
+                        if (form.ShowDialog() == DialogResult.OK)
+                        {
+                            seller = form.Seller;
+                            LTsCrmDB.SaveChanges();
+                            dataGridView1.Refresh();
+                        }
                     }
                 }
             }
-            else if (typeof(T) == typeof(Customer))
+            catch 
             {
-                var customer = set.Find(id) as Customer;
-                if (customer != null)
-                {
-                    var form = new CustomerForm(customer);
-                    if (form.ShowDialog() == DialogResult.OK)
-                    {
-                        customer = form.Customer;
-                        LTsCrmDB.SaveChanges();
-                        dataGridView1.Refresh();
-                    }
-                }
-            }
-            else if (typeof(T) == typeof(Seller))
-            {
-                var seller = set.Find(id) as Seller;
-                if (seller != null)
-                {
-                    var form = new SellerForm(seller);
-                    if (form.ShowDialog() == DialogResult.OK)
-                    {
-                        seller = form.Seller;
-                        LTsCrmDB.SaveChanges();
-                        dataGridView1.Refresh();
-                    }
-                }
+                MessageBox.Show("Select the line to change.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void DeleteButton_Click(object sender, EventArgs e)
         {
-            var id = dataGridView1.SelectedRows[0].Cells[0].Value;
-            if (typeof(T) == typeof(Product))
+            try
             {
-                var product = set.Find(id) as Product;
-                LTsCrmDB.Products.Remove(product);
-                LTsCrmDB.SaveChanges();
-                dataGridView1.Update();
+                var id = dataGridView1.SelectedRows[0].Cells[0].Value;
+                if (typeof(T) == typeof(Product))
+                {
+                    var product = set.Find(id) as Product;
+                    LTsCrmDB.Products.Remove(product);
+                    LTsCrmDB.SaveChanges();
+                    dataGridView1.Update();
+                }
+                else if (typeof(T) == typeof(Customer))
+                {
+                    var customer = set.Find(id) as Customer;
+                    LTsCrmDB.Customers.Remove(customer);
+                    LTsCrmDB.SaveChanges();
+                    dataGridView1.Update();
+                }
+                else if (typeof(T) == typeof(Seller))
+                {
+                    var seller = set.Find(id) as Seller;
+                    LTsCrmDB.Sellers.Remove(seller);
+                    LTsCrmDB.SaveChanges();
+                    dataGridView1.Update();
+                }
+                else if (typeof(T) == typeof(Check))
+                {
+                    var check = set.Find(id) as Check;
+                    LTsCrmDB.Checks.Remove(check);
+                    LTsCrmDB.SaveChanges();
+                    dataGridView1.Update();
+                }
             }
-            else if (typeof(T) == typeof(Customer))
+            catch
             {
-                var customer = set.Find(id) as Customer;
-                LTsCrmDB.Customers.Remove(customer);
-                LTsCrmDB.SaveChanges();
-                dataGridView1.Update();
-            }
-            else if (typeof(T) == typeof(Seller))
-            {
-                var seller = set.Find(id) as Seller;
-                LTsCrmDB.Sellers.Remove(seller);
-                LTsCrmDB.SaveChanges();
-                dataGridView1.Update();
+                MessageBox.Show("Select the line to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

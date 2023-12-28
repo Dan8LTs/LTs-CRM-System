@@ -67,24 +67,20 @@ namespace BL.Models
                 var sells = new List<Sell>();
                 foreach (Product product in cart)
                 {
-                    if (product.Count > 0)
+                    var sell = new Sell()
                     {
-                        var sell = new Sell()
-                        {
-                            CheckId = check.CheckId,
-                            Check = check,
-                            ProductId = product.ProductId,
-                            Product = product
-                        };
+                        CheckId = check.CheckId,
+                        Check = check,
+                        ProductId = product.ProductId,
+                        Product = product
+                    };
 
-                        sells.Add(sell);
-                        if (!IsModel)
-                        {
-                            LTsCrmDB.Sells.Add(sell);
-                        }
-                        product.Count--;
-                        sum += product.Price;
+                    sells.Add(sell);
+                    if (!IsModel)
+                    {
+                        LTsCrmDB.Sells.Add(sell);
                     }
+                    sum += product.Price;
                 }
 
                 check.Price = sum;

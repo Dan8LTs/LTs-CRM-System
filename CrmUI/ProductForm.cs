@@ -23,8 +23,7 @@ namespace CrmUI
         {
             Product = Product ?? new Product();
             Product.Name = richTextBox1.Text;
-            Product.Price = Convert.ToDecimal(numericUpDown1.Value);
-            Product.Count = Convert.ToInt32(numericUpDown2.Value);
+            Product.Price = Convert.ToDecimal(numericUpDown1.Value) * Convert.ToInt32(numericUpDown2.Value);
             Close();
         }
     }
