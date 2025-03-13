@@ -45,7 +45,7 @@ namespace BL.Models
                 return 0;
             }
             var cart = Carts.Dequeue();
-            if (cart != null)
+            if (cart != null && Seller != null)
             {
                 var check = new Check()
                 {
